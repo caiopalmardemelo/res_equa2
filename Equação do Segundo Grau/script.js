@@ -1,22 +1,19 @@
-function calculadora(opera) {
+function bask() {
 
-let ax2 = parseFloat(document.getElementById('a').value);
-let bx = parseFloat(document.getElementById('b').value);
-let cc = parseFloat(document.getElementById('c').value);
+    let a = parseFloat(document.getElementById('a').value);
+    let b = parseFloat(document.getElementById('b').value);
+    let c = parseFloat(document.getElementById('c').value);
+    let dlta = (b*b)-(4*a*c);
+    let res_dlta = Math.sqrt(dlta);
 
-let dlta = (b*b)*(-4*a*c);
-let nmr1 = (-b+dlta)/(2*a);
-let nmr2 = (-b-dlta)/(2*a);
-res_dlta = Math.sqrt(dlta);
-let asnw = 0;
-
-if (ax2>0){
-    alert('oi');
-}else if (ax2<0){
-
-}else {
-
-}
-document.getElementById('rslt').textContent = 'Resultado:' + asnw;
-
+    if (dlta == 0){
+        alert('Você é gay!');
+    }else if (dlta < 0){
+        let nmr1 = (-b)/(2*a);
+        document.getElementById('rslt').innerText = nmr1;
+    }else {
+        let nmr1 = (-b+dlta)/(2*a);
+        let nmr2 = (-b-dlta)/(2*a);
+        document.getElementById('rslt').innerText = 'Resultado:' + nmr1 + 'E' + nmr2;
+    }
 }
