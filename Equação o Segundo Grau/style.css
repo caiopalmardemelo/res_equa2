@@ -1,14 +1,48 @@
+@font-face {
+    font-family: fonte;
+    src: url("SpongeboyMeBob.ttf");
+}
+
 body {
-    background-image: url(drziovarl.jpeg);
+    background-image: url(backgroungbob.png);
 }
 
 p{
-    color: white;
+    color: black;
 }
 h1{
-    color: white;
+    font-family: fonte;
+    color: red;
 }
 
 span{
-    color: yellow;
+    color: black;
 }
+
+@keyframes mudaCor {
+  0% {
+    color: #ff0000;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75%{
+    color: #0000ff;
+  }
+  100% {
+    color: purple;
+  }
+}
+
+.texto-simples {
+  font-size: 48px;
+  animation: mudaCor 3s infinite linear;
+}
+
+img{
+    width: 250px;
+}
+
